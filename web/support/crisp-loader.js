@@ -1,8 +1,37 @@
-export const WELCOME = '您好，这里是 LEGAVIK 客服。请勿在聊天中发送或念出助记词、私钥、恢复密码或 Recovery Kit 内容，我们的工作人员永远不会向您索取这些信息。';
+export const WELCOME = '您好，这里是 LEGAVIK 客服。请勿在聊天中发送助记词、私钥、恢复密码或 Recovery Kit 内容，我们的工作人员永远不会向您索取这些信息。';
 export const AWAY = '我们会在下一个工作时段开始后 30 分钟内回复您。';
 export function outsideBusinessHours(date = new Date()) {
   const parts = Object.fromEntries(new Intl.DateTimeFormat('en-AU', {timeZone:'Australia/Sydney', weekday:'short', hour:'2-digit', hourCycle:'h23'}).formatToParts(date).map(p=>[p.type,p.value]));
   return ['Sat','Sun'].includes(parts.weekday) || Number(parts.hour) < 9 || Number(parts.hour) >= 18;
+}
+export function setCrispEmail(win, email) {
+  const value = typeof email === 'string' ? email.trim() : '';
+  if (!value || !Array.isArray(win.$crisp)) return false;
+  win.$crisp.push(['set','user:email',[value]]);
+  return true;
+}
+export async function bindCrispIdentity(win) {
+  const auth = win.LEGAVIK_SUPABASE_CLIENT?.auth;
+  if (!auth?.getUser || !Array.isArray(win.$crisp)) return false;
+  const applyVerifiedUser = async () => {
+    try {
+      const {data, error} = await auth.getUser();
+      return !error && setCrispEmail(win, data?.user?.email);
+    } catch {
+      return false;
+    }
+  };
+  await applyVerifiedUser();
+  if (typeof auth.onAuthStateChange === 'function') {
+    auth.onAuthStateChange((event) => {
+      if (event === 'SIGNED_OUT') {
+        win.$crisp.push(['do','session:reset']);
+        return;
+      }
+      if (event === 'SIGNED_IN' || event === 'USER_UPDATED') void applyVerifiedUser();
+    });
+  }
+  return true;
 }
 export function installCrisp(win = window, doc = document, date = new Date()) {
   const config = win.SKREK_PUBLIC_CONFIG, crisp = config?.crisp;
@@ -19,6 +48,7 @@ export function installCrisp(win = window, doc = document, date = new Date()) {
     shown = true;
     win.$crisp.push(['do','message:show',['text', WELCOME + (outsideBusinessHours(date) ? '\n' + AWAY : '')]]);
   }]);
+  void bindCrispIdentity(win);
   const script = doc.createElement('script');
   script.src = 'https://client.crisp.chat/l.js'; script.async = true;
   script.onerror = () => { /* Chat availability must not affect the account application. */ };
