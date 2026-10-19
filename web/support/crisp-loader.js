@@ -6,31 +6,58 @@ export function outsideBusinessHours(date = new Date()) {
 }
 export function setCrispEmail(win, email) {
   const value = typeof email === 'string' ? email.trim() : '';
-  if (!value || !Array.isArray(win.$crisp)) return false;
+  if (!value || typeof win.$crisp?.push !== 'function') return false;
   win.$crisp.push(['set','user:email',[value]]);
   return true;
 }
 export async function bindCrispIdentity(win) {
-  const auth = win.LEGAVIK_SUPABASE_CLIENT?.auth;
-  if (!auth?.getUser || !Array.isArray(win.$crisp)) return false;
+  if (typeof win.$crisp?.push !== 'function') return false;
+  let auth, generation = 0, signedOut = false, sessionReady = false;
+  let attempts = 0, timer;
   const applyVerifiedUser = async () => {
+    if (!auth || !sessionReady || signedOut) return false;
+    const current = ++generation;
     try {
       const {data, error} = await auth.getUser();
-      return !error && setCrispEmail(win, data?.user?.email);
+      return current === generation && !signedOut && !error && setCrispEmail(win, data?.user?.email);
     } catch {
       return false;
     }
   };
-  await applyVerifiedUser();
-  if (typeof auth.onAuthStateChange === 'function') {
-    auth.onAuthStateChange((event) => {
+  const attach = () => {
+    if (auth) return;
+    const candidate = win.LEGAVIK_SUPABASE_CLIENT?.auth;
+    if (!candidate?.getUser) return;
+    auth = candidate;
+    if (timer) win.clearTimeout(timer);
+    auth.onAuthStateChange?.((event) => {
       if (event === 'SIGNED_OUT') {
+        signedOut = true;
+        generation++;
         win.$crisp.push(['do','session:reset']);
         return;
       }
-      if (event === 'SIGNED_IN' || event === 'USER_UPDATED') void applyVerifiedUser();
+      if (event === 'SIGNED_IN' || event === 'USER_UPDATED' || event === 'INITIAL_SESSION') {
+        signedOut = false;
+        // Do not call Supabase auth inside its synchronous auth-state callback.
+        Promise.resolve().then(applyVerifiedUser);
+      }
     });
-  }
+    void applyVerifiedUser();
+  };
+  win.$crisp.push(['on','session:loaded',()=>{
+    sessionReady = true;
+    attach();
+    void applyVerifiedUser();
+  }]);
+  win.$crisp.push(['on','chat:opened',()=>{ attach(); void applyVerifiedUser(); }]);
+  // Covers binding to an SDK that has already loaded its existing session.
+  try { sessionReady = Boolean(win.$crisp.get?.('session:identifier')); } catch { /* not ready */ }
+  const poll = () => {
+    attach();
+    if (!auth && ++attempts < 120 && typeof win.setTimeout === 'function') timer = win.setTimeout(poll, 250);
+  };
+  poll();
   return true;
 }
 export function installCrisp(win = window, doc = document, date = new Date()) {
