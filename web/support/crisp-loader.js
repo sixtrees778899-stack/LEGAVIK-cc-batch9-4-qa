@@ -12,6 +12,8 @@ export function setCrispEmail(win, email) {
 }
 export async function bindCrispIdentity(win) {
   if (typeof win.$crisp?.push !== 'function') return false;
+  const status = value => { if (win.document?.documentElement) win.document.documentElement.dataset.crispIdentity = value; };
+  status('WAITING_AUTH_AND_SESSION');
   let auth, generation = 0, signedOut = false, sessionReady = false;
   let attempts = 0, timer;
   const applyVerifiedUser = async () => {
@@ -19,8 +21,12 @@ export async function bindCrispIdentity(win) {
     const current = ++generation;
     try {
       const {data, error} = await auth.getUser();
-      return current === generation && !signedOut && !error && setCrispEmail(win, data?.user?.email);
+      if (current !== generation || signedOut) return false;
+      const sent = !error && setCrispEmail(win, data?.user?.email);
+      status(sent ? 'EMAIL_QUEUED' : error ? 'AUTH_LOOKUP_FAILED' : 'NO_LOGGED_IN_EMAIL');
+      return sent;
     } catch {
+      status('AUTH_LOOKUP_FAILED');
       return false;
     }
   };
@@ -29,11 +35,13 @@ export async function bindCrispIdentity(win) {
     const candidate = win.LEGAVIK_SUPABASE_CLIENT?.auth;
     if (!candidate?.getUser) return;
     auth = candidate;
+    status(sessionReady ? 'AUTH_AND_SESSION_READY' : 'WAITING_CRISP_SESSION');
     if (timer) win.clearTimeout(timer);
     auth.onAuthStateChange?.((event) => {
       if (event === 'SIGNED_OUT') {
         signedOut = true;
         generation++;
+        status('SIGNED_OUT');
         win.$crisp.push(['do','session:reset']);
         return;
       }
@@ -47,6 +55,7 @@ export async function bindCrispIdentity(win) {
   };
   win.$crisp.push(['on','session:loaded',()=>{
     sessionReady = true;
+    status(auth ? 'AUTH_AND_SESSION_READY' : 'WAITING_AUTH');
     attach();
     void applyVerifiedUser();
   }]);
