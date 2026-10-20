@@ -65,6 +65,9 @@ export async function bindCrispIdentity(win, onSessionLoaded = () => {}) {
   // Email binding can merge/change the conversation. Append again after the SDK
   // acknowledges the identity change; never read or retain the event's email.
   win.$crisp.push(['on','user:email:changed',()=>{ if (sessionReady) onSessionLoaded(); }]);
+  // A new conversation from the widget may be persisted only on first send.
+  // Ignore message contents; append the environment tag after that boundary.
+  win.$crisp.push(['on','message:sent',()=>{ if (sessionReady) onSessionLoaded(); }]);
   win.$crisp.push(['on','chat:opened',()=>{ attach(); void applyVerifiedUser(); }]);
   // Covers binding to an SDK that has already loaded its existing session.
   try { sessionReady = Boolean(win.$crisp.get?.('session:identifier')); } catch { /* not ready */ }
