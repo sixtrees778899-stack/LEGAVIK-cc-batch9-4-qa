@@ -10,7 +10,7 @@ export function setCrispEmail(win, email) {
   win.$crisp.push(['set','user:email',[value]]);
   return true;
 }
-export async function bindCrispIdentity(win) {
+export async function bindCrispIdentity(win, onSessionLoaded = () => {}) {
   if (typeof win.$crisp?.push !== 'function') return false;
   const status = value => { if (win.document?.documentElement) win.document.documentElement.dataset.crispIdentity = value; };
   status('WAITING_AUTH_AND_SESSION');
@@ -54,6 +54,7 @@ export async function bindCrispIdentity(win) {
     void applyVerifiedUser();
   };
   win.$crisp.push(['on','session:loaded',()=>{
+    onSessionLoaded();
     sessionReady = true;
     status(auth ? 'AUTH_AND_SESSION_READY' : 'WAITING_AUTH');
     attach();
@@ -78,13 +79,17 @@ export function installCrisp(win = window, doc = document, date = new Date()) {
   win.$crisp = [];
   win.CRISP_WEBSITE_ID = crisp.websiteId;
   win.CRISP_RUNTIME_CONFIG = {locale:'zh'};
+  // This loader is QA-only (origin/path/backend gates above). Add, never replace,
+  // routing tags. Reapply after normal new-session and logout/reset events.
+  const tagQa = () => win.$crisp.push(['set','session:segments',[['qa']]]);
+  tagQa();
   let shown = false;
   win.$crisp.push(['on','chat:opened',()=>{
     if (shown) return;
     shown = true;
     win.$crisp.push(['do','message:show',['text', WELCOME + (outsideBusinessHours(date) ? '\n' + AWAY : '')]]);
   }]);
-  void bindCrispIdentity(win);
+  void bindCrispIdentity(win, tagQa);
   const script = doc.createElement('script');
   script.src = 'https://client.crisp.chat/l.js'; script.async = true;
   script.onerror = () => { /* Chat availability must not affect the account application. */ };
