@@ -23,6 +23,7 @@ export async function bindCrispIdentity(win, onSessionLoaded = () => {}) {
       const {data, error} = await auth.getUser();
       if (current !== generation || signedOut) return false;
       const sent = !error && setCrispEmail(win, data?.user?.email);
+      if (sent) onSessionLoaded();
       status(sent ? 'EMAIL_QUEUED' : error ? 'AUTH_LOOKUP_FAILED' : 'NO_LOGGED_IN_EMAIL');
       return sent;
     } catch {
@@ -40,6 +41,7 @@ export async function bindCrispIdentity(win, onSessionLoaded = () => {}) {
     auth.onAuthStateChange?.((event) => {
       if (event === 'SIGNED_OUT') {
         signedOut = true;
+        sessionReady = false;
         generation++;
         status('SIGNED_OUT');
         win.$crisp.push(['do','session:reset']);
@@ -54,15 +56,19 @@ export async function bindCrispIdentity(win, onSessionLoaded = () => {}) {
     void applyVerifiedUser();
   };
   win.$crisp.push(['on','session:loaded',()=>{
-    onSessionLoaded();
     sessionReady = true;
+    onSessionLoaded();
     status(auth ? 'AUTH_AND_SESSION_READY' : 'WAITING_AUTH');
     attach();
     void applyVerifiedUser();
   }]);
+  // Email binding can merge/change the conversation. Append again after the SDK
+  // acknowledges the identity change; never read or retain the event's email.
+  win.$crisp.push(['on','user:email:changed',()=>{ if (sessionReady) onSessionLoaded(); }]);
   win.$crisp.push(['on','chat:opened',()=>{ attach(); void applyVerifiedUser(); }]);
   // Covers binding to an SDK that has already loaded its existing session.
   try { sessionReady = Boolean(win.$crisp.get?.('session:identifier')); } catch { /* not ready */ }
+  if (sessionReady) onSessionLoaded();
   const poll = () => {
     attach();
     if (!auth && ++attempts < 120 && typeof win.setTimeout === 'function') timer = win.setTimeout(poll, 250);
@@ -80,9 +86,8 @@ export function installCrisp(win = window, doc = document, date = new Date()) {
   win.CRISP_WEBSITE_ID = crisp.websiteId;
   win.CRISP_RUNTIME_CONFIG = {locale:'zh'};
   // This loader is QA-only (origin/path/backend gates above). Add, never replace,
-  // routing tags. Reapply after normal new-session and logout/reset events.
+  // routing tags. Wait for the session, then reapply after email binding.
   const tagQa = () => win.$crisp.push(['set','session:segments',[['qa']]]);
-  tagQa();
   let shown = false;
   win.$crisp.push(['on','chat:opened',()=>{
     if (shown) return;
