@@ -67,7 +67,15 @@ export async function bindCrispIdentity(win, onSessionLoaded = () => {}) {
   win.$crisp.push(['on','user:email:changed',()=>{ if (sessionReady) onSessionLoaded(); }]);
   // A new conversation from the widget may be persisted only on first send.
   // Ignore message contents; append the environment tag after that boundary.
-  win.$crisp.push(['on','message:sent',()=>{ if (sessionReady) onSessionLoaded(); }]);
+  win.$crisp.push(['on','message:sent',()=>{
+    if (!sessionReady) return;
+    onSessionLoaded();
+    // The first send can race server-side conversation creation. One bounded
+    // post-send append covers persistence without loops or message inspection.
+    if (typeof win.setTimeout === 'function') win.setTimeout(()=>{
+      if (sessionReady) onSessionLoaded();
+    }, 1000);
+  }]);
   win.$crisp.push(['on','chat:opened',()=>{ attach(); void applyVerifiedUser(); }]);
   // Covers binding to an SDK that has already loaded its existing session.
   try { sessionReady = Boolean(win.$crisp.get?.('session:identifier')); } catch { /* not ready */ }
@@ -90,7 +98,10 @@ export function installCrisp(win = window, doc = document, date = new Date()) {
   win.CRISP_RUNTIME_CONFIG = {locale:'zh'};
   // This loader is QA-only (origin/path/backend gates above). Add, never replace,
   // routing tags. Wait for the session, then reapply after email binding.
-  const tagQa = () => win.$crisp.push(['set','session:segments',[['qa']]]);
+  const tagQa = () => {
+    win.$crisp.push(['set','session:segments',[['qa']]]);
+    if (doc.documentElement) doc.documentElement.dataset.crispQaTag = 'QUEUED';
+  };
   let shown = false;
   win.$crisp.push(['on','chat:opened',()=>{
     if (shown) return;
