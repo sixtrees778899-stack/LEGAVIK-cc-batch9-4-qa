@@ -1,108 +1,108 @@
 {
   "schema_version": 1,
-  "deployment_identity": "legavik-platform-signer-s1-1-qa-20261029-1",
-  "release": "legavik-platform-signer-s1-1-qa-20261029-1",
-  "release_timestamp": "2026-10-29T10:45:03.890Z",
-  "source_commit": "d78fb49a03a21636dc4704c53a8583b1b9d99a86",
+  "deployment_identity": "legavik-platform-signer-r2-qa-20261030-1",
+  "release": "legavik-platform-signer-r2-qa-20261030-1",
+  "release_timestamp": "2026-10-29T21:59:05.975Z",
+  "source_commit": "9e6307db71bb3373b91bc12c61bd99d247cceb27",
   "canonical_origin": "https://sixtrees778899-stack.github.io",
-  "canonical_entry": "https://sixtrees778899-stack.github.io/LEGAVIK-cc-batch9-4-qa/web/v3-crypto/index.html?release=legavik-platform-signer-s1-1-qa-20261029-1#home",
+  "canonical_entry": "https://sixtrees778899-stack.github.io/LEGAVIK-cc-batch9-4-qa/web/v3-crypto/index.html?release=legavik-platform-signer-r2-qa-20261030-1#home",
   "html": [
     {
       "path": "web/v3-crypto/index.html",
-      "sha256": "52362a4222903b13626ca34a0225cd97d85a0b43857bfe385a7a29d7308c00c4"
+      "sha256": "90869c1cfb922d08d82f23bad265908872986bc8e98a3013d3bc67069b8ed733"
     },
     {
       "path": "web/account/index.html",
-      "sha256": "81a96574a926da58f63a7b71f9def1a75d742d9f1883b5aa91d99713bc505bb6"
+      "sha256": "9fb6e749263463ff4ac5e52565140a5952253291e58105f79a2b8a1ff9b2abfb"
     },
     {
       "path": "web/v2/index.html",
-      "sha256": "3080f182815493eb9a1df0c7f83e7b2087291e0a49bb71042248fd90b771f615"
+      "sha256": "3dc30ad087f3b827b71d807f2e221ae16995a8bff0b7da49740dc3d858434463"
     },
     {
       "path": "web/recover.html",
-      "sha256": "2ba4a4748c5927cd1f8b264055345c32b7a45a4661a51df54b0999773ae1c3aa"
+      "sha256": "8b1071d4a7dfbec679574f5611e26a0db58ddb76e2166d99735a682c1bd63ba1"
     }
   ],
   "assets": [
     {
-      "path": "web/canonical-runtime-gate.legavik-platform-signer-s1-1-qa-20261029-1.js",
-      "sha256": "542826e3f7f35144a1b96ddfb15d7fc02f5e5329bdd5745c5d8c7895f21e8eab"
+      "path": "web/canonical-runtime-gate.legavik-platform-signer-r2-qa-20261030-1.js",
+      "sha256": "afd80626bf0d54a5870cc6e6d72990bc3f4ab2edf91cc4a2ea448646cd8ce9c9"
     },
     {
-      "path": "web/canonical-entry-recovery.legavik-platform-signer-s1-1-qa-20261029-1.js",
-      "sha256": "0cd5bfd05b0b48ce696910b37daac23017c527acb60176f0c5092b288b96dfbe"
+      "path": "web/canonical-entry-recovery.legavik-platform-signer-r2-qa-20261030-1.js",
+      "sha256": "4eddc75ac4450c6b734968dab4b36eea0f9446cb70ec7b907dc6d3c688a126c1"
     },
     {
-      "path": "web/recover.legavik-platform-signer-s1-1-qa-20261029-1.bundle.js",
-      "sha256": "8d073094dcb39c068cbe491f2d1cc47bc079713a53cf88bf257b1016dfaac4e1"
+      "path": "web/recover.legavik-platform-signer-r2-qa-20261030-1.bundle.js",
+      "sha256": "8a169e6ea01b27615a7cc8941fcfe315ae5832297fb24cb9cadaf360c00fb741"
     },
     {
-      "path": "web/styles.legavik-platform-signer-s1-1-qa-20261029-1.css",
+      "path": "web/styles.legavik-platform-signer-r2-qa-20261030-1.css",
       "sha256": "4efb1b1719d3c9e1dba4fef71e2a9055aa5d55b51e601899b5b25c58e0f47325"
     },
     {
-      "path": "web/recovery-workspace.legavik-platform-signer-s1-1-qa-20261029-1.css",
+      "path": "web/recovery-workspace.legavik-platform-signer-r2-qa-20261030-1.css",
       "sha256": "d3d7091b9888de662b0d8ef9ca4eb10dc0520c012791a1744a033973b98160e2"
     },
     {
-      "path": "web/account/canonical-entry.legavik-platform-signer-s1-1-qa-20261029-1.js",
-      "sha256": "595c801ede6136a6a5cb59cc9ae083ee6dbd448bd6d1b0db7c49f38a3a183637"
+      "path": "web/account/canonical-entry.legavik-platform-signer-r2-qa-20261030-1.js",
+      "sha256": "503afb4fb27732348041b98f221e211e07162c932976dc1aaa11cd57a19c2a84"
     },
     {
-      "path": "web/account/public-config.legavik-platform-signer-s1-1-qa-20261029-1.js",
+      "path": "web/account/public-config.legavik-platform-signer-r2-qa-20261030-1.js",
       "sha256": "6c349e10ba13dd2499e0ae7be82e61f1c031af6e8f1a4adf4606c822c4076160"
     },
     {
-      "path": "web/account/account-nav-bridge.legavik-platform-signer-s1-1-qa-20261029-1.bundle.js",
-      "sha256": "e8b7a3bf99efcd7f95ebb52a614c384e2440f595e8b90184a5b67e91410d65b3"
+      "path": "web/account/account-nav-bridge.legavik-platform-signer-r2-qa-20261030-1.bundle.js",
+      "sha256": "ad2b55f1cbf5da58d7a03a43dcba64ba670a931cc7a09c13dd301b83f54a4755"
     },
     {
-      "path": "web/account/account-app.legavik-platform-signer-s1-1-qa-20261029-1.bundle.js",
-      "sha256": "c9cc81ba84fdb390437a78385ef2a32a31bd8a9c76004bf2f17f988d58386436"
+      "path": "web/account/account-app.legavik-platform-signer-r2-qa-20261030-1.bundle.js",
+      "sha256": "fae62b0a00a6ba90a685d101a2224adbba591fe44a134962a3c607074acb3c81"
     },
     {
-      "path": "web/account/account.legavik-platform-signer-s1-1-qa-20261029-1.css",
+      "path": "web/account/account.legavik-platform-signer-r2-qa-20261030-1.css",
       "sha256": "3112f19da6cbf1b7a29bd128aac8f705e3e5723bf5ee26a328ed25be7d6bae50"
     },
     {
-      "path": "web/account/auth-ux.legavik-platform-signer-s1-1-qa-20261029-1.css",
+      "path": "web/account/auth-ux.legavik-platform-signer-r2-qa-20261030-1.css",
       "sha256": "5823ddc485c6f37e49c30f602861c9a4afa360f1c445777eddcc88ca614ca35f"
     },
     {
-      "path": "web/v2/canonical-entry.legavik-platform-signer-s1-1-qa-20261029-1.js",
-      "sha256": "6e830a4580d20fabd8821aea4316146daef5826c9989aa2e91a6a0471184c86c"
+      "path": "web/v2/canonical-entry.legavik-platform-signer-r2-qa-20261030-1.js",
+      "sha256": "fc00012a81935fbdf52832b780769ee73823a9f9db9c62fa074dc59c3fe8d1e9"
     },
     {
-      "path": "web/v2/v2-app.legavik-platform-signer-s1-1-qa-20261029-1.bundle.js",
-      "sha256": "d50206d17d82b718ddb8ab432962e9e622f27faea51dcbbda5da8303d9e6e3f9"
+      "path": "web/v2/v2-app.legavik-platform-signer-r2-qa-20261030-1.bundle.js",
+      "sha256": "87c0f43f425d801acb349d67fdcead28b1c3ff5a9fdd83888b3496a7083444bc"
     },
     {
-      "path": "web/v2/v2.legavik-platform-signer-s1-1-qa-20261029-1.css",
+      "path": "web/v2/v2.legavik-platform-signer-r2-qa-20261030-1.css",
       "sha256": "644a10ed80352be4e373f5a6cb7e8e7e28de2e9ba50ec7e5800fdc074eb08f4a"
     },
     {
-      "path": "web/v2/readiness.legavik-platform-signer-s1-1-qa-20261029-1.css",
+      "path": "web/v2/readiness.legavik-platform-signer-r2-qa-20261030-1.css",
       "sha256": "ab68f659ecf59ec0cdb2cadd34c02ef24802686ff82bf35f85dc50ba3018728a"
     },
     {
-      "path": "web/v2/product-integration.legavik-platform-signer-s1-1-qa-20261029-1.css",
+      "path": "web/v2/product-integration.legavik-platform-signer-r2-qa-20261030-1.css",
       "sha256": "e883c56be728b07b04e9539ed03f3e7c592e120254090eec253d07d9e7240376"
     },
     {
-      "path": "web/v3-crypto/canonical-entry.legavik-platform-signer-s1-1-qa-20261029-1.js",
-      "sha256": "f03eea96b0d3b8820fc8847e49b35d4900983751800b3d818d08a69d8e6b34eb"
+      "path": "web/v3-crypto/canonical-entry.legavik-platform-signer-r2-qa-20261030-1.js",
+      "sha256": "10a847ffebe6e815113dca411d9b0cbd4a94ad64a2bdb32d04233afa571b0eb1"
     },
     {
-      "path": "web/v3-crypto/product-v1.legavik-platform-signer-s1-1-qa-20261029-1.bundle.js",
-      "sha256": "0eb553c45c5915a701ed49c531b22c6ceaa5bc71f2e04f147502cf0791596349"
+      "path": "web/v3-crypto/product-v1.legavik-platform-signer-r2-qa-20261030-1.bundle.js",
+      "sha256": "8b1feab003f9a1854a704f7ff068a499d3465f8d6e0733483b64ce660bcfaf93"
     },
     {
-      "path": "web/v3-crypto/product-v1.legavik-platform-signer-s1-1-qa-20261029-1.css",
+      "path": "web/v3-crypto/product-v1.legavik-platform-signer-r2-qa-20261030-1.css",
       "sha256": "f1e1e6c69cbc551d2148a041dc04d8ea3638e0db09f26608f4d4277d0e476d42"
     },
     {
-      "path": "src/ui/skrek-global-header.legavik-platform-signer-s1-1-qa-20261029-1.css",
+      "path": "src/ui/skrek-global-header.legavik-platform-signer-r2-qa-20261030-1.css",
       "sha256": "cedadaf8ed1135a636507dbec6e6a5996e357c34dac4e89872b38717fa8f1e74"
     }
   ]
