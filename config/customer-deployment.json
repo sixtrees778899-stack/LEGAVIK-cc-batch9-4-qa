@@ -1,6 +1,6 @@
 {
-  "deployment_identity": "legavik-purchase-attachment-qa-20261029-1",
+  "deployment_identity": "legavik-platform-signer-s1-1-qa-20261029-1",
   "canonical_origin": "https://sixtrees778899-stack.github.io",
   "canonical_base": "/LEGAVIK-cc-batch9-4-qa",
-  "release_timestamp": "2026-10-29T09:43:04.775Z"
+  "release_timestamp": "2026-10-29T10:45:03.890Z"
 }
