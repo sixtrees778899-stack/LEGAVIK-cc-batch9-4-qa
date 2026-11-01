@@ -1,6 +1,6 @@
 {
-  "deployment_identity": "legavik-production-capable-qa-20261101-3",
+  "deployment_identity": "legavik-signer-ledger-qa-20261101-1",
   "canonical_origin": "https://sixtrees778899-stack.github.io",
   "canonical_base": "/LEGAVIK-cc-batch9-4-qa",
-  "release_timestamp": "2026-11-01T10:59:11.916Z"
+  "release_timestamp": "2026-11-01T11:18:57.262Z"
 }
