@@ -1,3 +1,4 @@
+import {publicDeployment} from '../../src/shared/public-deployment.js';
 export const WELCOME = '您好，这里是 LEGAVIK 客服。请勿在聊天中发送助记词、私钥、恢复密码或 Recovery Kit 内容，我们的工作人员永远不会向您索取这些信息。';
 export const AWAY = '我们会在下一个工作时段开始后 30 分钟内回复您。';
 export function outsideBusinessHours(date = new Date()) {
@@ -90,8 +91,10 @@ export async function bindCrispIdentity(win, onSessionLoaded = () => {}) {
 export function installCrisp(win = window, doc = document, date = new Date()) {
   const config = win.SKREK_PUBLIC_CONFIG, crisp = config?.crisp;
   const location = win.location;
-  if (config?.supabaseUrl !== 'https://vtaielvbknzunowmskkc.supabase.co' || crisp?.enabled !== true || crisp?.safetySettingsConfirmed !== true) return false;
-  if (location.origin !== 'https://sixtrees778899-stack.github.io' || !/^\/LEGAVIK-cc-batch9-4-qa\/web\/(?:account|v3-crypto)\/index\.html$/.test(location.pathname)) return false;
+  const deployment=publicDeployment(config,location);
+  if (!deployment || crisp?.enabled !== true || crisp?.safetySettingsConfirmed !== true) return false;
+  const base=new URL(deployment.siteUrl).pathname.replace(/\/$/,'');
+  if (![base+'/web/account/index.html',base+'/web/v3-crypto/index.html'].includes(location.pathname)) return false;
   if (!/^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/i.test(crisp.websiteId || '') || win.CRISP_WEBSITE_ID) return false;
   win.$crisp = [];
   win.CRISP_WEBSITE_ID = crisp.websiteId;
@@ -99,7 +102,7 @@ export function installCrisp(win = window, doc = document, date = new Date()) {
   // This loader is QA-only (origin/path/backend gates above). Add, never replace,
   // routing tags. Wait for the session, then reapply after email binding.
   const tagQa = () => {
-    win.$crisp.push(['set','session:segments',[['qa']]]);
+    win.$crisp.push(['set','session:segments',[[deployment.environment]]]);
     if (doc.documentElement) doc.documentElement.dataset.crispQaTag = 'QUEUED';
   };
   let shown = false;
