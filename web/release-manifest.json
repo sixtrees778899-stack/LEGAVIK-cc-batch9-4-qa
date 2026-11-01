@@ -2,8 +2,8 @@
   "schema_version": 1,
   "deployment_identity": "legavik-production-capable-qa-20261101-3",
   "release": "legavik-production-capable-qa-20261101-3",
-  "release_timestamp": "2026-11-01T08:26:31.554Z",
-  "source_commit": "face55df93a353e90d6738a8a76e3a3718ac1f44",
+  "release_timestamp": "2026-11-01T10:59:11.916Z",
+  "source_commit": "e9c4c6440d94ef435c8a3102d49b74256058e4c8",
   "canonical_origin": "https://sixtrees778899-stack.github.io",
   "canonical_entry": "https://sixtrees778899-stack.github.io/LEGAVIK-cc-batch9-4-qa/web/v3-crypto/index.html?release=legavik-production-capable-qa-20261101-3#home",
   "html": [
@@ -59,7 +59,7 @@
     },
     {
       "path": "web/account/account-app.legavik-production-capable-qa-20261101-3.bundle.js",
-      "sha256": "95e320f5785a4329466b7533bdec10304655d5c4ded0db5d4c10078a9337dcb9"
+      "sha256": "dd03179c82ef747a741a57118f5d9d4f12d25dd56eac9e1cef90aab7903073a3"
     },
     {
       "path": "web/account/account.legavik-production-capable-qa-20261101-3.css",
