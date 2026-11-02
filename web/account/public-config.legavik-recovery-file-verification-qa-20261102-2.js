@@ -1,0 +1,3 @@
+globalThis.SKREK_PUBLIC_CONFIG={"deployment":{"environment":"qa","stripeMode":"test","siteUrl":"https://sixtrees778899-stack.github.io/LEGAVIK-cc-batch9-4-qa","supabaseUrl":"https://vtaielvbknzunowmskkc.supabase.co","signerAddress":"N20eYG6Z2IGHIppWJML-SSo2vr_ZPqZzeqJ1DSZWcxM","release":"legavik-recovery-file-verification-qa-20261102-2"},"supabaseUrl":"https://vtaielvbknzunowmskkc.supabase.co","supabaseAnonKey":"sb_publishable_CY_WRJJqcQmHCwHR4vV27Q_UknvsT0K","paymentsEnabled":true,"platformSigningQA":true,"crisp":{"enabled":true,"websiteId":"5ff5c5c3-cf75-4040-b598-b7ed36a5e312","safetySettingsConfirmed":true}};
+
+window.SKREK_PUBLIC_CONFIG.platformSigningQA=true;
