@@ -114,76 +114,76 @@
       "sha256": "cedadaf8ed1135a636507dbec6e6a5996e357c34dac4e89872b38717fa8f1e74"
     }
   ],
-  "ui_deployment_identity": "legavik-upload-stall-u1-qa-20261106-3",
-  "ui_source_commit": "c066364ceda1e9be12abc411f39dcbdaca233fb9",
+  "ui_deployment_identity": "legavik-upload-stall-u1-qa-20261106-4",
+  "ui_source_commit": "05e65a2d68b9497a0e70a12ab973f41acf53c9fa",
   "ui_note": "Recovery retains its previous byte-identical artifacts; unchanged create source is rebuilt only to incorporate approved account entitlement modules.",
   "ui_assets": [
     {
-      "path": "web/account/account-app.legavik-upload-stall-u1-qa-20261106-3.bundle.js",
-      "sha256": "5259ba47d28a45e6d03382255d69c7a4bf91d01ac7b29b9d3449014cad5224ca"
+      "path": "web/account/account-app.legavik-upload-stall-u1-qa-20261106-4.bundle.js",
+      "sha256": "7610b7212640d15c6af559e651ebdad9a4825a33c5c1bf084be92469520be5f4"
     },
     {
-      "path": "web/account/account-nav-bridge.legavik-upload-stall-u1-qa-20261106-3.bundle.js",
-      "sha256": "c19cc76dfdc8c6202579d5caad4666bb6dfdbfcbc9e5f9f93a95ce67c8da9841"
+      "path": "web/account/account-nav-bridge.legavik-upload-stall-u1-qa-20261106-4.bundle.js",
+      "sha256": "37c7966eb3fdc91b9f0104a80cade011d10931a94bf618af32ef544dc5b69737"
     },
     {
-      "path": "web/v3-crypto/product-v1.legavik-upload-stall-u1-qa-20261106-3.bundle.js",
-      "sha256": "0cf1fd773cd270d1edb08238d85d761cee6e478f9e64614d7a519709a15723b4"
+      "path": "web/v3-crypto/product-v1.legavik-upload-stall-u1-qa-20261106-4.bundle.js",
+      "sha256": "2c23a63105fc28a8a0bba8f456445010fdafa0d6a8da2621e9f4bf92df3a8c5b"
     },
     {
-      "path": "web/admin/signer-ledger.legavik-upload-stall-u1-qa-20261106-3.bundle.js",
+      "path": "web/admin/signer-ledger.legavik-upload-stall-u1-qa-20261106-4.bundle.js",
       "sha256": "917091312743511bd655aaf15ac34753082d57354a1635c9a8cdbd70295a9afc"
     },
     {
-      "path": "web/v2/v2-app.legavik-upload-stall-u1-qa-20261106-3.bundle.js",
-      "sha256": "371c93aad3ca4c363f4839983f4de78bd47f1618c54a30aa88755b39c3766dfb"
+      "path": "web/v2/v2-app.legavik-upload-stall-u1-qa-20261106-4.bundle.js",
+      "sha256": "140c60c8a2cecf95f11698f1b2f8338b1f606f86077ac26786485e5e4a15e84f"
     },
     {
-      "path": "web/account/public-config.legavik-upload-stall-u1-qa-20261106-3.js",
-      "sha256": "8413891e416b49aecea2e8a31241ccb0fe345ed969e4c4902072a154005f5383"
+      "path": "web/account/public-config.legavik-upload-stall-u1-qa-20261106-4.js",
+      "sha256": "df5244dd2680e93728ac6432ad264982c93954f0544c13bd50a6455a80875c9d"
     },
     {
-      "path": "web/account/canonical-entry.legavik-upload-stall-u1-qa-20261106-3.js",
-      "sha256": "1cd16f5150617f9b37274cec9bb647e14b7c6d5a081b6375a1a197b424eb31eb"
+      "path": "web/account/canonical-entry.legavik-upload-stall-u1-qa-20261106-4.js",
+      "sha256": "5cadadfbc67ef831aa64a82d5de69eaf529d08d8b8d9debc774b1bd258e1070c"
     },
     {
-      "path": "web/v3-crypto/canonical-entry.legavik-upload-stall-u1-qa-20261106-3.js",
-      "sha256": "c72a1f3cbc56c4a2bee6065d1d3e4558f55b89447d084c8c990395de4da6f56e"
+      "path": "web/v3-crypto/canonical-entry.legavik-upload-stall-u1-qa-20261106-4.js",
+      "sha256": "59628e5ff19165da4f5f7f0a9203816f062bb0fa1251a2ef8183c70cab7ea01e"
     },
     {
-      "path": "web/v2/canonical-entry.legavik-upload-stall-u1-qa-20261106-3.js",
-      "sha256": "61ce1fe64b061f8a63a3f98ef0f9195af5895ba1211c5a38bbbf9d89b7a80a86"
+      "path": "web/v2/canonical-entry.legavik-upload-stall-u1-qa-20261106-4.js",
+      "sha256": "9c68702717a7c7c7a8875734e4ab343e5bd11806c7c5723a18374bd7cea6064f"
     },
     {
-      "path": "web/canonical-runtime-gate.legavik-upload-stall-u1-qa-20261106-3.js",
-      "sha256": "ca3650570bf647a0dfbebaa33a78815e06fd12830a297d4944025f8c309c8872"
+      "path": "web/canonical-runtime-gate.legavik-upload-stall-u1-qa-20261106-4.js",
+      "sha256": "8f8c2f1c5a3aa5fc3575dea9873fd72233d994c16fe87d9383edc34d40ed95d9"
     },
     {
-      "path": "web/account/account.legavik-upload-stall-u1-qa-20261106-3.css",
+      "path": "web/account/account.legavik-upload-stall-u1-qa-20261106-4.css",
       "sha256": "3006bec3c7324eb6ccaf69df9a7c9ccb6147851ff4ee30575dbff13c0bb053e8"
     },
     {
-      "path": "web/account/auth-ux.legavik-upload-stall-u1-qa-20261106-3.css",
+      "path": "web/account/auth-ux.legavik-upload-stall-u1-qa-20261106-4.css",
       "sha256": "3a76d066d577be2398d7efc72f7088204ef3efb00ba46890c56daf2d0337aba5"
     },
     {
-      "path": "web/v3-crypto/product-v1.legavik-upload-stall-u1-qa-20261106-3.css",
+      "path": "web/v3-crypto/product-v1.legavik-upload-stall-u1-qa-20261106-4.css",
       "sha256": "960f774ef5068ac6a1f656ca568d4d1365e71f4046d5ce3b5fd373492972d633"
     },
     {
-      "path": "src/ui/skrek-global-header.legavik-upload-stall-u1-qa-20261106-3.css",
+      "path": "src/ui/skrek-global-header.legavik-upload-stall-u1-qa-20261106-4.css",
       "sha256": "cedadaf8ed1135a636507dbec6e6a5996e357c34dac4e89872b38717fa8f1e74"
     },
     {
-      "path": "web/v2/v2.legavik-upload-stall-u1-qa-20261106-3.css",
+      "path": "web/v2/v2.legavik-upload-stall-u1-qa-20261106-4.css",
       "sha256": "644a10ed80352be4e373f5a6cb7e8e7e28de2e9ba50ec7e5800fdc074eb08f4a"
     },
     {
-      "path": "web/v2/readiness.legavik-upload-stall-u1-qa-20261106-3.css",
+      "path": "web/v2/readiness.legavik-upload-stall-u1-qa-20261106-4.css",
       "sha256": "ab68f659ecf59ec0cdb2cadd34c02ef24802686ff82bf35f85dc50ba3018728a"
     },
     {
-      "path": "web/v2/product-integration.legavik-upload-stall-u1-qa-20261106-3.css",
+      "path": "web/v2/product-integration.legavik-upload-stall-u1-qa-20261106-4.css",
       "sha256": "e883c56be728b07b04e9539ed03f3e7c592e120254090eec253d07d9e7240376"
     },
     {
@@ -192,19 +192,19 @@
     },
     {
       "path": "web/account/index.html",
-      "sha256": "4e55ce8cee129bf6e6f859bda0114fd8ce5172520a4d6044aa46c41959c069f6"
+      "sha256": "17739e290332c737c3ac42deb793f4a66ccf53f76c89cc130ebad08e1e420383"
     },
     {
       "path": "web/v3-crypto/index.html",
-      "sha256": "b01f03edb0d5ec4e85bcc045ae7c0ea4c396ec1ba1271fa064e2fa8236dc2518"
+      "sha256": "f412292a41b822cb29afc0a597eee3f49651e362310e55b57d7dd07f3a24bc94"
     },
     {
       "path": "web/admin/signer-ledger.html",
-      "sha256": "fe1bfb5cc1579369ef471ff636da074402785fc8a0a2d7633b658aadd653c1ee"
+      "sha256": "d6531c6468a634ab45ae4991d10863d9b326fa0b24fb5b11dbeb6503b912bb1e"
     },
     {
       "path": "web/v2/index.html",
-      "sha256": "fd132432559c1890a7b445fa64e676c7ac18661c63ec9a3ddfec69f42ab03c1e"
+      "sha256": "4b86f014f817a6452914d59eb66bc48e791a14fc023f6d40145db06b304e9604"
     }
   ]
 }
