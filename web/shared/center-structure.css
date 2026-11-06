@@ -1,0 +1,19 @@
+/* CC-1: imported only by account.css; existing palette, no UI-3 redesign. */
+.center-main{min-width:0;overflow-wrap:anywhere}
+.center-main .cc-row{display:flex;align-items:center;justify-content:space-between;gap:20px;min-width:0;width:100%}
+.center-main .cc-row>div:first-child{min-width:0;flex:1}
+.center-main .cc-actions{display:flex;flex:0 1 auto;justify-content:flex-end;align-items:center;gap:12px;flex-wrap:wrap;margin-left:auto}
+.center-main .cc-actions .primary-link,.center-main .secondary-link,.center-main .quiet-action{display:inline-flex;align-items:center;justify-content:center;background:var(--green);color:white;border:0;border-radius:var(--ui-a28c64423e78);padding:var(--ui-78aea79b63cf);font-weight:800;text-decoration:none;text-align:center}
+.center-main .map-enrollment-usage strong,.center-main .map-enrollment-usage small{display:block}
+.center-main .map-enrollment-usage strong{font-size:1.3rem}
+.center-main .cc-current-version{border-top:1px solid var(--line);margin-top:20px;padding-top:20px}
+.center-main .service-entitlement{display:block}
+.center-main .service-entitlement>section{margin-bottom:20px}
+.center-main .service-entitlement article{margin-bottom:12px}
+.center-main .dashboard-stats{grid-template-columns:minmax(0,1fr)}
+.center-main .recent-map-list article{display:flex;align-items:center;flex-wrap:wrap}
+.center-main .recent-map-list .actions{margin-left:auto}
+.center-main .version-history article{display:block}
+.center-main .version-history article>div{flex-wrap:wrap}
+.center-main .security-note.cc-row{margin-top:24px}
+@media(max-width:760px){.center-layout{grid-template-columns:minmax(0,1fr)}.center-main .cc-row{flex-wrap:wrap;gap:12px}.center-main .cc-row>div:first-child{flex-basis:100%}.center-main .cc-actions{max-width:100%}.center-main .cc-actions .primary-link{max-width:100%;white-space:normal}.center-main .lifecycle-map-list>article>header{flex-direction:row}.center-main .recent-map-list article>*{max-width:100%}}

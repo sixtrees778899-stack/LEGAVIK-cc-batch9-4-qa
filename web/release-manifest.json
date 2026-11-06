@@ -1,120 +1,328 @@
 {
   "schema_version": 1,
-  "deployment_identity": "legavik-l3-prod-prep-qa-20261107-1",
-  "release": "legavik-l3-prod-prep-qa-20261107-1",
-  "release_timestamp": "2026-11-06T21:06:42.203Z",
-  "source_commit": "fc2bcb1074077f7a21c937720576ef5870f8c862",
+  "deployment_identity": "legavik-cc-1-structure-qa-20261107-1",
+  "release": "legavik-cc-1-structure-qa-20261107-1",
+  "release_timestamp": "2026-11-06T23:41:48.047Z",
+  "source_commit": "a152d4fd272f6c42588b95372984befe18718340",
   "canonical_origin": "https://sixtrees778899-stack.github.io",
-  "canonical_entry": "https://sixtrees778899-stack.github.io/LEGAVIK-cc-batch9-4-qa/web/v3-crypto/index.html?release=legavik-l3-prod-prep-qa-20261107-1#home",
+  "canonical_entry": "https://sixtrees778899-stack.github.io/LEGAVIK-cc-batch9-4-qa/web/v3-crypto/index.html?release=legavik-cc-1-structure-qa-20261107-1#home",
   "html": [
     {
       "path": "web/admin/signer-ledger.html",
-      "sha256": "d3cc0abd661fc94a3d9354fe5eb82c42f137b75a8570eb829ec316b7ed42cc0c"
+      "sha256": "4b8ddca37ae45348a76ee57c954c36bd96ae059b87799ab84bc86b0c4807aab0"
     },
     {
       "path": "web/v3-crypto/index.html",
-      "sha256": "092b532d9303bb2598b39f118e3bdb69d3f294321ef790093bafb885a0352b99"
+      "sha256": "1c8c9a1dd3d5e75afff2ab57960d1d39196f5c36471e5892c2656f92a8248571"
     },
     {
       "path": "web/account/index.html",
-      "sha256": "49cc98f541b24c938a690a90312f1379247ea64f72364581562847ce87026090"
+      "sha256": "f645bc2cfb9a473516e531a8c47987dec281813a5f4b3f1f5da01849fe7b95de"
     },
     {
       "path": "web/v2/index.html",
-      "sha256": "623e2b7f7797ce5d2e659f68722a1f14933fd70aa7972ebeda9ca5f0f2e8bef8"
+      "sha256": "74e8a79f0368f98150fb7055e502985d1e47e0322d3d09d01217b4d30e1aafad"
     },
     {
       "path": "web/recover.html",
-      "sha256": "dc6188d368ae8e1870e8a3531b170acdbe55c491ab2791fe0803c0c50569a418"
+      "sha256": "51f872f05efefc4d15fe8699158628619115c32d9f8b458a6d423180fbb83e23"
     }
   ],
   "assets": [
     {
-      "path": "web/admin/signer-ledger.legavik-l3-prod-prep-qa-20261107-1.bundle.js",
+      "path": "web/admin/signer-ledger.legavik-cc-1-structure-qa-20261107-1.bundle.js",
       "sha256": "4432cd1adc1ffc422bf6b52a1c5e36fbd814c03769ee3b471598d560bbe548f2"
     },
     {
-      "path": "web/canonical-runtime-gate.legavik-l3-prod-prep-qa-20261107-1.js",
-      "sha256": "ae3e862262481b31d225a2ae391f511c2aeb77059b6b685212d371260cee2482"
+      "path": "web/canonical-runtime-gate.legavik-cc-1-structure-qa-20261107-1.js",
+      "sha256": "e64a867e7af18729e71cb2d5b2df5cb5d7506cfb47ea8d0dfc365fd08d05f07e"
     },
     {
-      "path": "web/canonical-entry-recovery.legavik-l3-prod-prep-qa-20261107-1.js",
-      "sha256": "052c0e5de964cafe373cfe65876407a23529bb2a962b671c0e10bc880f18885c"
+      "path": "web/canonical-entry-recovery.legavik-cc-1-structure-qa-20261107-1.js",
+      "sha256": "68681b9301087462ec0d18c18ec1c2dc42f69495d71b01497cab6a2fa341eb1b"
     },
     {
-      "path": "web/recover.legavik-l3-prod-prep-qa-20261107-1.bundle.js",
-      "sha256": "f19618af2bcc0136441b94f6eb1142c69895ddbc85158ed0160326935865f67f"
+      "path": "web/recover.legavik-cc-1-structure-qa-20261107-1.bundle.js",
+      "sha256": "dba17eccfa4a3727eccf3456fbea69a8259e195ea10eab4ba6c2ec442ac22c95"
     },
     {
-      "path": "web/styles.legavik-l3-prod-prep-qa-20261107-1.css",
+      "path": "web/styles.legavik-cc-1-structure-qa-20261107-1.css",
       "sha256": "4efb1b1719d3c9e1dba4fef71e2a9055aa5d55b51e601899b5b25c58e0f47325"
     },
     {
-      "path": "web/recovery-workspace.legavik-l3-prod-prep-qa-20261107-1.css",
+      "path": "web/recovery-workspace.legavik-cc-1-structure-qa-20261107-1.css",
       "sha256": "d3d7091b9888de662b0d8ef9ca4eb10dc0520c012791a1744a033973b98160e2"
     },
     {
-      "path": "web/account/canonical-entry.legavik-l3-prod-prep-qa-20261107-1.js",
-      "sha256": "758f9af7420b9179984ad43962e801dc40397f4364dedee73899ab42eff2aa42"
+      "path": "web/account/canonical-entry.legavik-cc-1-structure-qa-20261107-1.js",
+      "sha256": "6cc2312cd14466a9247c5af30929be5147f7c2477f856cc8a4b4cdc8177fdbe9"
     },
     {
-      "path": "web/account/public-config.legavik-l3-prod-prep-qa-20261107-1.js",
-      "sha256": "c119ff2047c31dd57a2edb4c240d0d048815bc4a377967b5ef0df02e96747748"
+      "path": "web/account/public-config.legavik-cc-1-structure-qa-20261107-1.js",
+      "sha256": "088444606cf03d7d3c807598a25bb45bb20d06c17dcc9ad42a8baa4421f26934"
     },
     {
-      "path": "web/account/account-nav-bridge.legavik-l3-prod-prep-qa-20261107-1.bundle.js",
-      "sha256": "01b8ebe96badf7423b19c657a94c556aab73e872799ae53b96c344979c54787a"
+      "path": "web/account/account-nav-bridge.legavik-cc-1-structure-qa-20261107-1.bundle.js",
+      "sha256": "75336dd0614c78e83a172526816fcff560319202d85d0472daaf1036788a2dda"
     },
     {
-      "path": "web/account/account-app.legavik-l3-prod-prep-qa-20261107-1.bundle.js",
-      "sha256": "b0e80617bed8a9fb801ce37536449e99f134364241764fc74da9cc1e03354167"
+      "path": "web/account/account-app.legavik-cc-1-structure-qa-20261107-1.bundle.js",
+      "sha256": "74287a76c3024a0ae42d7d57ebf39dd399394a6f2b664d9f58df049da0c9b958"
     },
     {
-      "path": "web/account/account.legavik-l3-prod-prep-qa-20261107-1.css",
-      "sha256": "3006bec3c7324eb6ccaf69df9a7c9ccb6147851ff4ee30575dbff13c0bb053e8"
+      "path": "web/account/account.legavik-cc-1-structure-qa-20261107-1.css",
+      "sha256": "d0259e0b3813b6b4a398cf2bf69d08b02b8e27a56c328b0752a14f8855317fe9"
     },
     {
-      "path": "web/account/auth-ux.legavik-l3-prod-prep-qa-20261107-1.css",
+      "path": "web/account/auth-ux.legavik-cc-1-structure-qa-20261107-1.css",
       "sha256": "3a76d066d577be2398d7efc72f7088204ef3efb00ba46890c56daf2d0337aba5"
     },
     {
-      "path": "web/v2/canonical-entry.legavik-l3-prod-prep-qa-20261107-1.js",
-      "sha256": "5828814c1427e03e07a06d81f3cba129fb123f89f60cc19b7e7e4f5ad2fdf4dd"
+      "path": "web/v2/canonical-entry.legavik-cc-1-structure-qa-20261107-1.js",
+      "sha256": "a767545566ea69adc26af7a4d4e6ff534a3abfb49a8bad10c2499d2ba2deeba2"
     },
     {
-      "path": "web/v2/v2-app.legavik-l3-prod-prep-qa-20261107-1.bundle.js",
-      "sha256": "c1583238f144c716855d1b6c55a478a76915f2a8843b24d3d0cf05c3d94fe44e"
+      "path": "web/v2/v2-app.legavik-cc-1-structure-qa-20261107-1.bundle.js",
+      "sha256": "a066993a2f1292de19eb816ace700fa09eed86ef349ecba95aa608f3f3a89eac"
     },
     {
-      "path": "web/v2/v2.legavik-l3-prod-prep-qa-20261107-1.css",
+      "path": "web/v2/v2.legavik-cc-1-structure-qa-20261107-1.css",
       "sha256": "644a10ed80352be4e373f5a6cb7e8e7e28de2e9ba50ec7e5800fdc074eb08f4a"
     },
     {
-      "path": "web/v2/readiness.legavik-l3-prod-prep-qa-20261107-1.css",
+      "path": "web/v2/readiness.legavik-cc-1-structure-qa-20261107-1.css",
       "sha256": "ab68f659ecf59ec0cdb2cadd34c02ef24802686ff82bf35f85dc50ba3018728a"
     },
     {
-      "path": "web/v2/product-integration.legavik-l3-prod-prep-qa-20261107-1.css",
+      "path": "web/v2/product-integration.legavik-cc-1-structure-qa-20261107-1.css",
       "sha256": "e883c56be728b07b04e9539ed03f3e7c592e120254090eec253d07d9e7240376"
     },
     {
-      "path": "web/v3-crypto/canonical-entry.legavik-l3-prod-prep-qa-20261107-1.js",
-      "sha256": "b51128605f06931aa63042c02ee5ff0baa302d1d333654c8b42fe609b22cd2c5"
+      "path": "web/v3-crypto/canonical-entry.legavik-cc-1-structure-qa-20261107-1.js",
+      "sha256": "eabab079b0e81e309ee11f2d549bc7a414c1be33feda3193d31eb73f281b93ec"
     },
     {
-      "path": "web/v3-crypto/product-v1.legavik-l3-prod-prep-qa-20261107-1.bundle.js",
-      "sha256": "37f340f9d2b817f06426cab2887678b487cd8159a1dfc2dec04ec68aed79bd8a"
+      "path": "web/v3-crypto/product-v1.legavik-cc-1-structure-qa-20261107-1.bundle.js",
+      "sha256": "53a28e513cf8faeba92aeb48c78957e24ddab8264fc9ecbc1781d59e7d872545"
     },
     {
-      "path": "web/v3-crypto/product-v1.legavik-l3-prod-prep-qa-20261107-1.css",
+      "path": "web/v3-crypto/product-v1.legavik-cc-1-structure-qa-20261107-1.css",
       "sha256": "960f774ef5068ac6a1f656ca568d4d1365e71f4046d5ce3b5fd373492972d633"
     },
     {
-      "path": "src/ui/skrek-global-header.legavik-l3-prod-prep-qa-20261107-1.css",
+      "path": "src/ui/skrek-global-header.legavik-cc-1-structure-qa-20261107-1.css",
       "sha256": "cedadaf8ed1135a636507dbec6e6a5996e357c34dac4e89872b38717fa8f1e74"
     },
     {
       "path": "web/robots.txt",
+      "sha256": "331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1"
+    },
+    {
+      "path": "config/recovery-map/v2/platform-templates-v2.json",
+      "sha256": "0aa9917743667f785d7e6a2966063fe2439a6c39c37916c0cb685dfae05be2d8"
+    },
+    {
+      "path": "config/recovery-map/v2/living-rules-v2.json",
+      "sha256": "ae09a0c885ce5398861781745e8fe93d30ee47b32f1967ed6cd8de36921c7557"
+    },
+    {
+      "path": "config/security/recovery-password-v1.json",
+      "sha256": "6a1ed40c4cae93b72763d6708262c54f29c2f220fd9c093d9e457265b5de9c55"
+    },
+    {
+      "path": "config/attachments/v1.json",
+      "sha256": "824f0f6dba7de8a3560450d2ea52a4efd4c5f5d28cad20fb34f082e5f4001d19"
+    },
+    {
+      "path": "web/styles.css",
+      "sha256": "4efb1b1719d3c9e1dba4fef71e2a9055aa5d55b51e601899b5b25c58e0f47325"
+    },
+    {
+      "path": "web/assets/LEGAVIK-Recovery-Guide-V1.pdf",
+      "sha256": "fe19ece2ef96da4093f7aa2c88bb54221b5ed459f31c8a78de8d734ff9b02722"
+    },
+    {
+      "path": "web/assets/SKREK-Recovery-Guide-V2.pdf",
+      "sha256": "2fb97d467a3ee710048251ff192eff93bd3fb0a788b74da2be652d8272cdef56"
+    },
+    {
+      "path": "web/assets/legavik-brand-master-v1.png",
+      "sha256": "6f593c6aa75f69eda7cba735ea0387194544d8b2bafee4b5e562a79e46d9d38b"
+    },
+    {
+      "path": "web/assets/professional-preview-estate-planning.jpg",
+      "sha256": "5e0c45aa8d63e4c179855e1cf18a3f9e22f837c6e9c9d330924dbc2bbec5cbbb"
+    },
+    {
+      "path": "web/assets/professional-preview-wealth-management.jpg",
+      "sha256": "bb33a1fdab951a02835534cbd1e87072d75e53d378abec3c6cdd29d3e6afece8"
+    },
+    {
+      "path": "web/assets/security-privacy-visual.png",
+      "sha256": "768209b25800ca62cfc38cd6c80a3262a9db1fa648862fab6f4055c71d297f28"
+    },
+    {
+      "path": "web/assets/skrek-digital-asset-map-v1.png",
+      "sha256": "148ce0a888a191de3c31ca9e4eeaaec964f632699a111067e22a36d7d17a51da"
+    },
+    {
+      "path": "web/assets/skrek-logo-formal.png",
+      "sha256": "c675c23a65b7768ac0d2877797df2c335801ff0872ef44a4b043e92adee4add1"
+    },
+    {
+      "path": "web/shared/center-structure.css",
+      "sha256": "2911c0ac0c13544a897b2e3687ffc023000628c67fddad65ce0e37e42ef00b59"
+    },
+    {
+      "path": "web/shared/tokens.css",
+      "sha256": "ef9f1cd258c26694d01e7ed3ccdf20f6b9c5e8ee5c04df9bb2de46277c4c70ec"
+    },
+    {
+      "path": "web/legal/privacy.html",
+      "sha256": "affe07a5de69eba44ec62d1edb7ccaa5fac36af1280e77ec3c4c6e78253ff9e7"
+    },
+    {
+      "path": "web/legal/risk.html",
+      "sha256": "b57c9bff352f57a24012af84ae39fec69ef66fe3eeb3df62f1785340c3b27f6e"
+    },
+    {
+      "path": "web/legal/terms.html",
+      "sha256": "e6f0c4551a40981c4bc80c315fda163426e4b158bff1be0ad316ebc2a3804721"
+    },
+    {
+      "path": "web/v2/assets/templates/LEGAVIK_Module1_资产与账户_Canonical_V2.docx",
+      "sha256": "3bc44f51412d59c70be6cb2e79d752bd1e66cdadabb5585de316788a0e9d002c"
+    },
+    {
+      "path": "web/v2/assets/templates/LEGAVIK_Module2_恢复所需条件与资料_Canonical_V2.docx",
+      "sha256": "892f4618af90f6e55343751ac8d6b8d30497a1db080a992a9bd711f41fb8f923"
+    },
+    {
+      "path": "web/v2/assets/templates/LEGAVIK_Module3_位置与查找_单一平台信息_Canonical_V2.docx",
+      "sha256": "cd0edb5556ea6852789300c5447148098280334ed26f30853ce578449005e17c"
+    },
+    {
+      "path": "web/v2/assets/templates/LEGAVIK_Module3_位置与查找_单一平台填写模板_V3_Final.docx",
+      "sha256": "ffcb9e19ee117965b1e85e945a9071911faceb959da463f48e0e427812c7544f"
+    },
+    {
+      "path": "web/v2/assets/templates/LEGAVIK_Module3_位置与查找_恢复信息位置汇总_Canonical_V2.docx",
+      "sha256": "874bd575e471be8f60dfeabb200bad7f97789813935eb3a9c9660bbc39c605d5"
+    },
+    {
+      "path": "web/v2/assets/templates/LEGAVIK_Module3_位置与查找_汇总填写模板_Clean_Formal_V1.docx",
+      "sha256": "3e93ac946a8d31c6ae93d6972f90d3a752fd690a59666bc59e83ba5ee60eb424"
+    },
+    {
+      "path": "web/v2/assets/templates/LEGAVIK_Module4_恢复与转移步骤_单一平台填写模板_V1_Final.docx",
+      "sha256": "8198b7052ec752a175caa2122bd1578f8b253740980dd26728da92b0f8ee8a14"
+    },
+    {
+      "path": "web/v2/assets/templates/LEGAVIK_Module4_恢复与转移步骤_单一平台恢复步骤_Canonical_V2.1.docx",
+      "sha256": "b74ec74e2b6676c2d3ddae2e66cb4cbe65e6206b6c23f58327412cef6c5d6870"
+    },
+    {
+      "path": "web/v2/assets/templates/LEGAVIK_Module4_恢复与转移步骤_单一平台恢复步骤_Canonical_V2.docx",
+      "sha256": "0966c85e9c758b96dc6cf321369e7343bf7836c2e3c1f293ec354be4a7f99726"
+    },
+    {
+      "path": "web/v2/assets/templates/LEGAVIK_Module4_恢复与转移步骤_恢复步骤汇总_Canonical_V2.1.docx",
+      "sha256": "b54d559ed191afb061ae5a40d1675b55d041f27a263b87b3c40c92ef3d373cd1"
+    },
+    {
+      "path": "web/v2/assets/templates/LEGAVIK_Module4_恢复与转移步骤_恢复步骤汇总_Canonical_V2.docx",
+      "sha256": "f266eb6f9557b5e3bd0d798d8c6a80aa6654b531a863b2724b40bfdda42ff0e2"
+    },
+    {
+      "path": "web/v2/assets/templates/LEGAVIK_Module4_恢复与转移步骤_汇总填写模板_Clean_Formal_V1.docx",
+      "sha256": "c81e5f7e4578da71cab0bf405ec4bf7b5c05bfb0c122d781bba134c664ee81de"
+    },
+    {
+      "path": "web/v2/assets/templates/LEGAVIK_Module5_协助人_Canonical_V2.docx",
+      "sha256": "c612d9d2022867850fcfddf3eeff1c21ed7f07bc2877d3983fe260151f0f4853"
+    },
+    {
+      "path": "web/v2/assets/templates/LEGAVIK_Module6_给未来恢复人的嘱托_Canonical_V2.docx",
+      "sha256": "2ad8f33550a8b4c9ed0ff240810e0a4df19f8d6a97ea033436732444f9163a6f"
+    },
+    {
+      "path": "web/v2/assets/templates/LEGAVIK_Module6_给未来恢复人的嘱托_Canonical_V3.1.docx",
+      "sha256": "5b9ac861ed6a809fff66ae735d389c1a53e8c49f174492509343cb36b8493e6e"
+    },
+    {
+      "path": "web/v2/assets/templates/SKREK_Module1_资产与账户_Canonical_V2.docx",
+      "sha256": "2388a29180921bdd6f297217a56587f4079c79faf605962cf04dda126baccb71"
+    },
+    {
+      "path": "web/v2/assets/templates/SKREK_Module2_恢复所需条件与资料_Canonical_V2.docx",
+      "sha256": "34a4de33333f08caad9a2adc92b22b05d45a5939537b3025329e0090e0960342"
+    },
+    {
+      "path": "web/v2/assets/templates/SKREK_Module3_位置与查找_单一平台信息_Canonical_V2.docx",
+      "sha256": "483933144c79abc5d30e3b66e88f9f82d55ca68ecd8f20614655d2cbaa84ca67"
+    },
+    {
+      "path": "web/v2/assets/templates/SKREK_Module3_位置与查找_单一平台填写模板_V3_Final.docx",
+      "sha256": "0b2b8fac3aba38af538d9a3e57bd5b0fa66c525967353194815343502c742dbf"
+    },
+    {
+      "path": "web/v2/assets/templates/SKREK_Module3_位置与查找_恢复信息位置汇总_Canonical_V2.docx",
+      "sha256": "d7800dbea4e8c571e07720cee59f20c43a7ae01897e1f08eb7acba32d9e8d518"
+    },
+    {
+      "path": "web/v2/assets/templates/SKREK_Module3_位置与查找_汇总填写模板_Clean_Formal_V1.docx",
+      "sha256": "eadadfbee3b8b051c6bc45cbf7912c4ee225181f996446073aca63dde4020f15"
+    },
+    {
+      "path": "web/v2/assets/templates/SKREK_Module4_恢复与转移步骤_单一平台填写模板_V1_Final.docx",
+      "sha256": "f471bb5258e3dc77d54ff17e9b40f764f713448303d38daa8d82606782e3d83c"
+    },
+    {
+      "path": "web/v2/assets/templates/SKREK_Module4_恢复与转移步骤_单一平台恢复步骤_Canonical_V2.1.docx",
+      "sha256": "25ee4e59cc3c99bdcd06f27fc69ef6f548b606e0ad93f7e9b2e16a58ab1a041f"
+    },
+    {
+      "path": "web/v2/assets/templates/SKREK_Module4_恢复与转移步骤_单一平台恢复步骤_Canonical_V2.docx",
+      "sha256": "6cd5965bde801eb2670841a6cb328455c8e8805db02bea8b8a73987233d60d27"
+    },
+    {
+      "path": "web/v2/assets/templates/SKREK_Module4_恢复与转移步骤_恢复步骤汇总_Canonical_V2.1.docx",
+      "sha256": "ea1783012262888b66a260849e5bedb438b000058b0712ead862aca22adb4a20"
+    },
+    {
+      "path": "web/v2/assets/templates/SKREK_Module4_恢复与转移步骤_恢复步骤汇总_Canonical_V2.docx",
+      "sha256": "ee1763fd916846a6cd6e472d043d1e0ad5d90316bd2b78dce3d4a0ed9e7a8212"
+    },
+    {
+      "path": "web/v2/assets/templates/SKREK_Module4_恢复与转移步骤_汇总填写模板_Clean_Formal_V1.docx",
+      "sha256": "5cfc087738953a1f6beed54314831c2c1489fd0b32d44651a019bc7f3f3f46f7"
+    },
+    {
+      "path": "web/v2/assets/templates/SKREK_Module5_协助人_Canonical_V2.docx",
+      "sha256": "694b1fe3bbba57bffc854e66aabf7275a26aa433dedbd0d54d4c856566bf8bc6"
+    },
+    {
+      "path": "web/v2/assets/templates/SKREK_Module6_给未来恢复人的嘱托_Canonical_V2.docx",
+      "sha256": "2db929cc7b273b1919f19f938451c62db1395acf1bba625acb961fc837f13c7a"
+    },
+    {
+      "path": "web/v2/assets/templates/SKREK_Module6_给未来恢复人的嘱托_Canonical_V3.1.docx",
+      "sha256": "c8705f736ca5b5dbd63fcb9c2e494b342293a0bdc9dd1b9a68b2c0edab79328e"
+    },
+    {
+      "path": "artifacts/independent-recovery-tool-v1/LEGAVIK-Independent-Recovery-Tool-V1.html",
+      "sha256": "6f6cc6c68ece94965e1397f6ced63f923240d30399dfe42807f3603ccc7c3ef6"
+    },
+    {
+      "path": "artifacts/independent-recovery-tool-v1/LEGAVIK-Independent-Recovery-Tool-V1.html.sha256",
+      "sha256": "576fdbd6dbb040e7d69972965ea82a330a3e31efa4dc26b84cc3539846453f4b"
+    },
+    {
+      "path": "artifacts/independent-recovery-tool-v1/manifest.json",
+      "sha256": "ea1240c193e59693c3b5076b9a48ceadc0b96365daa363539e79f54e4a50b9ec"
+    },
+    {
+      "path": "robots.txt",
       "sha256": "331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1"
     }
   ]
