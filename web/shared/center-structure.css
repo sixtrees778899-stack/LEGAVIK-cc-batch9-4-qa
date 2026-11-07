@@ -16,4 +16,4 @@
 .center-main .version-history article{display:block}
 .center-main .version-history article>div{flex-wrap:wrap}
 .center-main .security-note.cc-row{margin-top:24px}
-@media(max-width:760px){.center-layout{grid-template-columns:minmax(0,1fr)}.center-main .cc-row{flex-wrap:wrap;gap:12px}.center-main .cc-row>div:first-child{flex-basis:100%}.center-main .cc-actions{max-width:100%}.center-main .cc-actions .primary-link{max-width:100%;white-space:normal}.center-main .lifecycle-map-list>article>header{flex-direction:row}.center-main .recent-map-list article>*{max-width:100%}}
+@media(max-width:760px){.center-layout:has(.center-main){grid-template-columns:minmax(0,1fr)}.center-main .cc-row{flex-wrap:wrap;gap:12px}.center-main .cc-row>div:first-child{flex-basis:100%}.center-main .cc-actions{max-width:100%}.center-main .cc-actions .primary-link{max-width:100%;white-space:normal}.center-main .lifecycle-map-list>article>header{flex-direction:row}.center-main .recent-map-list article>*{max-width:100%}}
