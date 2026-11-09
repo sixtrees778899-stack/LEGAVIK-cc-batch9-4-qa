@@ -1,6 +1,6 @@
 {
   "policy_version":1,
-  "limits":{"max_attachment_bytes":10485760,"max_version_bytes":52428800,"max_attachments":100},
+  "limits":{"max_attachment_bytes":20971520,"max_version_bytes":52428800,"max_attachments":100},
   "extension_mime":{"pdf":"application/pdf","docx":"application/vnd.openxmlformats-officedocument.wordprocessingml.document","txt":"text/plain","md":"text/markdown","json":"application/json","jpg":"image/jpeg","jpeg":"image/jpeg","png":"image/png","webp":"image/webp","mp3":"audio/mpeg","m4a":"audio/mp4","wav":"audio/wav","mp4":"video/mp4","mov":"video/quicktime","webm":"video/webm","bin":"application/octet-stream"},
   "allowed_media":[
     {"category":"文档","mime_prefixes":["application/pdf","application/json","application/vnd.openxmlformats-officedocument.wordprocessingml.document","text/plain","text/markdown"],"extensions":["pdf","docx","txt","md","json"]},
