@@ -2,7 +2,7 @@
   "schema_version": 1,
   "deployment_identity": "legavik-main-748f4b5e4c83-qa-20261119-1",
   "release": "legavik-main-748f4b5e4c83-qa-20261119-1",
-  "release_timestamp": "2026-11-19T02:06:28.880Z",
+  "release_timestamp": "2026-11-19T02:16:34.227Z",
   "source_commit": "748f4b5e4c83028670b572081d78f1bdb0641caa",
   "canonical_origin": "https://sixtrees778899-stack.github.io",
   "canonical_entry": "https://sixtrees778899-stack.github.io/LEGAVIK-cc-batch9-4-qa/web/v3-crypto/index.html?release=legavik-main-748f4b5e4c83-qa-20261119-1#home",
@@ -115,7 +115,7 @@
     },
     {
       "path": "web/support/crisp-loader.js",
-      "sha256": "097a20917dd179cf3534c816f5e6d945d6e0842a639e80610242d2bab98b950a"
+      "sha256": "0da1a3730e7a21b72fbc248b47cba31b0c361f4944253f12cb0632b500481ad0"
     },
     {
       "path": "web/robots.txt",
