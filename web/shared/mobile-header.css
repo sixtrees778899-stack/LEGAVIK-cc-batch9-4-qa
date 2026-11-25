@@ -16,33 +16,49 @@
   }
 
   #site-header.global-header-host.mobile-header .wordmark {
-    flex:0 .1 104px;
+    flex:none;
+    width:auto;
     height:36px;
-    min-width:48px;
     min-height:36px;
-    max-width:none;
+    max-width:80px;
     padding:0;
   }
 
-  #site-header.global-header-host.mobile-header .wordmark img { height:38px; }
+  #site-header.global-header-host.mobile-header .wordmark img { height:30px; }
 
   #site-header.global-header-host.mobile-header .nav-actions { display:contents; }
 
   #site-header.global-header-host.mobile-header .account-state-link {
     display:block;
     box-sizing:border-box;
-    max-width:84px;
-    min-width:28px;
+    flex:none;
     margin-inline-start:auto;
-    height:36px;
-    min-height:36px;
-    padding:0 8px;
-    line-height:36px;
+    height:34px;
+    min-height:34px;
+    padding:0 10px;
+    font-size:13px;
+    line-height:34px;
     white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
     border-radius:999px;
     background:#f0eee6!important;
+  }
+
+  #site-header.global-header-host.mobile-header .account-state-link[data-account-signed-in] {
+    flex:0 1 auto;
+    max-width:90px;
+    min-width:0;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+
+  /* Keep the existing accessible login label while using shorter mobile copy. */
+  :lang(en) #site-header.global-header-host.mobile-header .account-state-link:not([data-account-signed-in]) {
+    font-size:0!important;
+  }
+
+  :lang(en) #site-header.global-header-host.mobile-header .account-state-link:not([data-account-signed-in])::before {
+    content:"Sign in";
+    font-size:13px;
   }
 
   #site-header.global-header-host.mobile-header .recovery-center-link,
@@ -57,8 +73,10 @@
   #site-header.global-header-host.mobile-header .nav-actions .recovery-center-link {
     display:inline-flex;
     align-items:center;
-    padding:0 12px;
-    font-size:13px;
+    height:34px;
+    min-height:34px;
+    padding:0 10px;
+    font-size:12px;
     white-space:nowrap;
     background:#12362c;
     transform:none;
@@ -73,12 +91,16 @@
     display:flex;
     flex:none;
     height:36px;
-    gap:1px;
-    font-size:12px;
+    font-size:13px;
+  }
+
+  #site-header.global-header-host.mobile-header .language-switch button[aria-pressed="true"],
+  #site-header.global-header-host.mobile-header .language-switch > span[aria-hidden="true"] {
+    display:none;
   }
 
   #site-header.global-header-host.mobile-header .language-switch button {
-    min-width:0;
+    min-width:36px;
     min-height:36px;
     padding:0 2px!important;
   }
@@ -140,20 +162,8 @@
 }
 
 @media (max-width:380px) {
-  #site-header.global-header-host.mobile-header:has(.mobile-recovery-label) .nav-shell {
+  #site-header.global-header-host.mobile-header .nav-shell {
     gap:4px;
-  }
-
-  #site-header.global-header-host.mobile-header.center-header:has(.mobile-recovery-label) .nav-shell {
-    gap:2px;
-  }
-
-  #site-header.global-header-host.mobile-header:has(.mobile-recovery-label) .account-state-link {
-    max-width:64px;
-  }
-
-  #site-header.global-header-host.mobile-header:has(.mobile-recovery-label) .nav-actions .recovery-center-link {
-    padding-inline:8px;
-    font-size:12px;
+    padding-inline:10px;
   }
 }
